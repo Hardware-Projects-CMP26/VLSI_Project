@@ -1,0 +1,70 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/CMP03/First Term/VLSI/project/carry_look_ahead_adder
+vcarry_look_ahead_adder_tb
+!s110 1734362400
+!i10b 1
+!s100 XCT<OS]dO?ob^XGnQFMn00
+IMHg7GMEFKiS@<Kn==zkFl2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1734361821
+8.\carry_look_ahead_adder_tb.v
+F.\carry_look_ahead_adder_tb.v
+L0 1
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1734362400.000000
+!s107 .\carry_look_ahead_adder_tb.v|
+!s90 .\carry_look_ahead_adder_tb.v|
+!i113 1
+Z3 tCvgOpt 0
+vcarry_lookahead_adder_32_bit
+!s110 1734362396
+!i10b 1
+!s100 FUjC9mZW2ENLh8`::i];Z0
+IVVfk0=czYnT00hoT7]:^z2
+R1
+R0
+w1734362381
+8.\carry_look_ahead_adder.v
+F.\carry_look_ahead_adder.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1734362396.000000
+!s107 .\carry_look_ahead_adder.v|
+!s90 .\carry_look_ahead_adder.v|
+!i113 1
+R3
+vfulladder
+!s110 1734362084
+!i10b 1
+!s100 RB[=4]<h5:m[H80X9gETQ1
+I8J[JCUMeXn2BRIcjGh9<;0
+R1
+R0
+w1734289285
+8.\full_adder.v
+F.\full_adder.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1734362084.000000
+!s107 .\full_adder.v|
+!s90 .\full_adder.v|
+!i113 1
+R3

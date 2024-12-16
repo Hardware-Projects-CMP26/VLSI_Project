@@ -1,0 +1,40 @@
+# OpenFile ./ripple_carry_adder_tb.v
+vsim work.ripple_carry_adder_tb
+# vsim work.ripple_carry_adder_tb 
+# Start time: 17:08:59 on Dec 16,2024
+# Loading work.ripple_carry_adder_tb
+# Loading work.ripple_carry_adder
+# Loading work.fulladder
+run -all
+# Time = 0 | A = 00000001, B = 00000001, SUM = 000000002
+# Passed at time 10: A = 00000001, B = 00000001, SUM = 000000002, Expected = 000000002
+# Time = 10 | A = 7fffffff, B = 00000001, SUM = 080000000
+# Passed at time 20: A = 7fffffff, B = 00000001, SUM = 080000000, Expected = 080000000
+# Time = 20 | A = 00000000, B = 12345678, SUM = 012345678
+# Passed at time 30: A = 00000000, B = 12345678, SUM = 012345678, Expected = 012345678
+# Time = 30 | A = 0000000f, B = 00000010, SUM = 00000001f
+# Passed at time 40: A = 0000000f, B = 00000010, SUM = 00000001f, Expected = 00000001f
+# Time = 40 | A = 80000000, B = 80000000, SUM = 100000000
+# Passed at time 50: A = 80000000, B = 80000000, SUM = 100000000, Expected = 100000000
+# Time = 50 | A = ffffffff, B = 00000001, SUM = 100000000
+# Passed at time 60: A = ffffffff, B = 00000001, SUM = 100000000, Expected = 100000000
+# Time = 60 | A = 12345678, B = 12345678, SUM = 02468acf0
+# Passed at time 70: A = 12345678, B = 12345678, SUM = 02468acf0, Expected = 02468acf0
+# Time = 70 | A = 12345678, B = edcba987, SUM = 0ffffffff
+# Passed at time 80: A = 12345678, B = edcba987, SUM = 0ffffffff, Expected = 0ffffffff
+# Time = 80 | A = a5a5a5a5, B = 5a5a5a5a, SUM = 0ffffffff
+# Passed at time 90: A = a5a5a5a5, B = 5a5a5a5a, SUM = 0ffffffff, Expected = 0ffffffff
+# Time = 90 | A = ffffffff, B = ffffffff, SUM = 1fffffffe
+# Passed at time 100: A = ffffffff, B = ffffffff, SUM = 1fffffffe, Expected = 1fffffffe
+# Time = 100 | A = 00000000, B = 00000000, SUM = 000000000
+# Passed at time 110: A = 00000000, B = 00000000, SUM = 000000000, Expected = 000000000
+# Time = 110 | A = ffff0000, B = ffff0000, SUM = 1fffe0000
+# Passed at time 120: A = ffff0000, B = ffff0000, SUM = 1fffe0000, Expected = 1fffe0000
+# Time = 120 | A = f0f0f0f0, B = 0f0f0f0f, SUM = 0ffffffff
+# Passed at time 130: A = f0f0f0f0, B = 0f0f0f0f, SUM = 0ffffffff, Expected = 0ffffffff
+# ** Note: $finish    : ./ripple_carry_adder_tb.v(177)
+#    Time: 130 ps  Iteration: 0  Instance: /ripple_carry_adder_tb
+# 1
+# Break in Module ripple_carry_adder_tb at ./ripple_carry_adder_tb.v line 177
+# End time: 17:09:24 on Dec 16,2024, Elapsed time: 0:00:25
+# Errors: 0, Warnings: 0

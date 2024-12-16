@@ -1,0 +1,50 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/CMP03/First Term/VLSI/project/carry_select_adder
+vcarry_select_adder
+!s110 1734360885
+!i10b 1
+!s100 74d;g4jNffQd7[8CF94D_2
+I;`IUi[UH@7Z_XiWfmBFok2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1734360874
+8.\carry_select_adder.v
+F.\carry_select_adder.v
+L0 1
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1734360885.000000
+!s107 .\carry_select_adder.v|
+!s90 .\carry_select_adder.v|
+!i113 1
+Z3 tCvgOpt 0
+vcarry_select_adder_tb
+!s110 1734360887
+!i10b 1
+!s100 5V1=EWQNni9=K4jfg5oJ[0
+IAacY0KkkG^EQGi8O2c=dR2
+R1
+R0
+w1734360279
+8.\carry_select_adder_tb.v
+F.\carry_select_adder_tb.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1734360887.000000
+!s107 .\carry_select_adder_tb.v|
+!s90 .\carry_select_adder_tb.v|
+!i113 1
+R3
