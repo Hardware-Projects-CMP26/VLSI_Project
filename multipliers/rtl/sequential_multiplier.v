@@ -4,10 +4,9 @@ module sequential_multiplier (
     input wire start,
     input wire [31:0] multiplicand,
     input wire [31:0] multiplier,
-    output reg signed [31:0] product,
+    output reg signed [63:0] product,
     output reg done
 );
-
     localparam IDLE = 2'b00;
     localparam CALC = 2'b01;
     localparam FINISH = 2'b10;
@@ -29,7 +28,7 @@ module sequential_multiplier (
             m <= 32'b0;
             q <= 32'b0;
             count <= 6'b0;
-            product <= 32'b0;
+            product <= 64'b0;
             done <= 1'b0;
             sign <= 1'b0;
         end
@@ -43,7 +42,6 @@ module sequential_multiplier (
                         count <= 6'b0;
                         done <= 1'b0;
                         state <= CALC;
-
                         sign <= multiplicand[31] ^ multiplier[31];
                     end
                 end
@@ -53,7 +51,6 @@ module sequential_multiplier (
                         if (m[0]) begin
                             acc <= acc + ({32'b0, q} << count);
                         end
-
                         m <= m >> 1;
                         count <= count + 1;
                     end
@@ -63,8 +60,7 @@ module sequential_multiplier (
                 end
 
                 FINISH: begin
-                    // Apply sign to final result
-                    product <= sign ? -acc[31:0] : acc[31:0];
+                    product <= sign ? -acc : acc;
                     done <= 1'b1;
                     state <= IDLE;
                 end
@@ -73,5 +69,4 @@ module sequential_multiplier (
             endcase
         end
     end
-
 endmodule
