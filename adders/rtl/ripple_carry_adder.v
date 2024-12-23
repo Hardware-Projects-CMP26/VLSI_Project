@@ -1,10 +1,10 @@
 module ripple_carry_adder(
-    input [31:0] A,
-    input [31:0] B,
-    output [32:0] SUM
+    input signed [31:0] A,
+    input signed [31:0] B,
+   output signed [32:0] SUM
     );
 
-  wire [30:0] w;   
+  wire [30:0] w;
   wire Co;   
 
   genvar i;
@@ -19,5 +19,8 @@ module ripple_carry_adder(
       end
     end
   endgenerate
+
   assign SUM[32] = Co;
+
 endmodule
+

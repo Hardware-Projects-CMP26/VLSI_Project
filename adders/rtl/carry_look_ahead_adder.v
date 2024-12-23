@@ -1,7 +1,7 @@
 module carry_lookahead_adder (
-    input [31:0]  A,
-    input [31:0]  B,
-    output [32:0] SUM
+    input signed [31:0]  A,
+    input signed [31:0]  B,
+    output signed [32:0] SUM
     );
       
   wire [32:0] w_C;

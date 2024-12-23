@@ -15,7 +15,7 @@
     ]
   },
   "DESIGN_NAME": "carry_select_adder",
-  "VERILOG_FILES": "dir::carry_select_adder.v",
+  "VERILOG_FILES": "dir::../rtl/carry_select_adder.v",
   "CLOCK_PORT": "clk",
   "CLOCK_PERIOD": 10.0,
   "SYNTH_STRATEGY": "AREA 0"
