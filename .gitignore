@@ -1,6 +1,5 @@
 work/
 transcript
 vsim.wlf
-*_lib/*
 *.json
-./multipliers/dadda_mul/dadda_mul_lib/*
+./multipliers/dadda_mul/dadda_mul_lib
