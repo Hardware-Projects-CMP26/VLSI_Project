@@ -1,0 +1,27 @@
+{
+    "nl": "/run/media/amir/79C24D830CD06580/VHDL/VLSI_Project/FPALU/openlane/runs/RUN_2024-12-25_00-33-54/01-yosys-synthesis/ALU.nl.v",
+    "pnl": null,
+    "pnl-sdf-friendly": null,
+    "pnl-npc": null,
+    "def": null,
+    "lef": null,
+    "openroad-lef": null,
+    "odb": null,
+    "sdc": null,
+    "sdf": null,
+    "spef": null,
+    "lib": null,
+    "spice": null,
+    "mag": null,
+    "gds": null,
+    "mag_gds": null,
+    "klayout_gds": null,
+    "json_h": null,
+    "vh": null,
+    "metrics": {
+        "design__instance__count": 5491,
+        "design__instance__area": 53884.1792,
+        "design__instance_unmapped__count": 0,
+        "synthesis__check_error__count": 1
+    }
+}
