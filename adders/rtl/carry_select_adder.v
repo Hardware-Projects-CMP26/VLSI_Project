@@ -1,24 +1,46 @@
 module carry_select_adder (
-    input signed  [31:0] A,
-    input signed  [31:0] B,
-    output signed [32:0] SUM
+    input  [31:0] A,
+    input  [31:0] B,
+    input Cin, 
+    output [31:0] SUM,
+    output Cout,
+    output Overflow
 );
-    wire signed [16:0] SUM_LOWER; 
-    wire signed [16:0] SUM_UPPER_C0; 
-    wire signed [16:0] SUM_UPPER_C1;
-    wire COUT_LOWER;
+    wire [31:0] Sum0, Sum1;
+    wire [32:0] Carry0, Carry1;
+    wire [31:0] CarryMux;
 
-    assign {COUT_LOWER, SUM_LOWER[15:0]} = A[15:0] + B[15:0];
+    assign Carry0[0] = 0;
+    assign Carry1[0] = 1;
 
-    wire signed [15:0] A_UPPER = A[31:16];
-    wire signed [15:0] B_UPPER = B[31:16];
 
-    assign SUM_UPPER_C0 = {1'b0, A_UPPER} + {1'b0, B_UPPER};   
-    assign SUM_UPPER_C1 = {1'b0, A_UPPER} + {1'b0, B_UPPER} + 1'b1;
+    genvar i;
+    generate
+        for (i = 0; i < 32; i = i + 1) begin : fulladder_gen
 
-    assign SUM[31:16] = COUT_LOWER ? SUM_UPPER_C1[15:0] : SUM_UPPER_C0[15:0];
+            fulladder FA (
+                .A(A[i]),
+                .B(B[i]),
+                .Cin(Carry0[i]),
+                .SUM(Sum0[i]),
+                .Cout(Carry0[i+1])
+            );
 
-    assign SUM[15:0] = SUM_LOWER[15:0];
-    assign SUM[32] = COUT_LOWER ? SUM_UPPER_C1[16] : SUM_UPPER_C0[16];
+            fulladder FA1 (
+                .A(A[i]),
+                .B(B[i]),
+                .Cin(Carry1[i]),
+                .SUM(Sum1[i]),
+                .Cout(Carry1[i+1])
+            );
+
+            assign CarryMux[i] = (Cin == 0) ? Carry0[i+1] : Carry1[i+1];
+            assign SUM[i] = (Cin == 0) ? Sum0[i] : Sum1[i];
+        end
+    endgenerate
+
+    // Final carry-out
+    assign Cout = CarryMux[31];
+    assign Overflow = (A[31] & B[31] & ~SUM[31]) | (~A[31] & ~B[31] & SUM[31]);
+
 endmodule
-
