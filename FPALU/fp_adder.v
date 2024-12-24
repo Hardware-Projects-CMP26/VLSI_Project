@@ -8,6 +8,7 @@ module ripple_4bit (
   wire [3:0] P;
   assign P=A ^ B;
   wire [3:0] Cout_temp;
+  wire select;
   assign select=&P;
   assign Cout = (select == 1'b1) ? Cin : Cout_temp[3];
   assign {Cout_temp[0],Sum[0]} = A[0] + B[0] + Cin;
@@ -16,6 +17,7 @@ module ripple_4bit (
   assign {Cout_temp[3],Sum[3]} = A[3] + B[3] + Cout_temp[2];
 
 endmodule
+
 module Bypass_Adder (
     input [31:0] A,
     input [31:0] B,
@@ -77,7 +79,7 @@ module fp_adder (
                  .Sum(result_fraction_sub12),
                  .Cout(cout)
                );
-  CarryBypass_Adder fraction_sub21(
+  Bypass_Adder fraction_sub21(
                       .A(fraction1_32neg),
                       .B(fraction2_32),
                       .Cin(cin),

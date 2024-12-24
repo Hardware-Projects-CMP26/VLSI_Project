@@ -1,0 +1,39 @@
+{
+    "meta": {
+        "version": 2,
+        "flow": [
+            "Yosys.Synthesis",
+            "OpenROAD.Floorplan",
+            "OpenROAD.GlobalPlacementSkipIO",
+            "OpenROAD.IOPlacement",
+            "OpenROAD.GlobalPlacement",
+            "OpenROAD.RepairDesignPostGPL",
+            "OpenROAD.DetailedPlacement",
+            "OpenROAD.CTS",
+            "OpenROAD.GlobalRouting",
+            "OpenROAD.DetailedRouting",
+            "OpenROAD.STAPrePNR",
+            "OpenROAD.RCX",
+            "OpenROAD.STAPostPNR",
+            "KLayout.StreamOut",
+            "Magic.StreamOut",
+            "Magic.DRC",
+            "Klayout.DRC",
+            "Magic.SpiceExtraction",
+            "Netgen.LVS"
+        ]
+    },
+    "DESIGN_NAME": "ALU",
+    "VERILOG_FILES": [
+        "dir::../fp_adder.v",
+        "dir::../fp_multiplier.v",
+        "dir::../ALU.v"
+    ],
+    "CLOCK_PERIOD": 20.0,
+    "SYNTH_STRATEGY": "DELAY 0",
+    "FP_CORE_UTIL": 60,
+    "FP_PDN_MULTILAYER": false,
+    "FP_PDN_HORIZONTAL_LAYER": null,
+    "PNR_SDC_FILE": "dir::./constraints.sdc",
+    "SIGNOFF_SDC_FILE": "dir::./constraints.sdc"
+}

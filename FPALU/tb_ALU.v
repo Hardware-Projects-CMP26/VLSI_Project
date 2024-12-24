@@ -1,3 +1,4 @@
+`timescale 1ns / 1ps
 module ALU_tb;
   // Declare inputs and outputs for the ALU
   reg signed [31:0] A, B;        // 32-bit IEEE 754 floating-point inputs

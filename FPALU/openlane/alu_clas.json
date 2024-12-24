@@ -1,0 +1,14 @@
+{
+    "DESIGN_NAME": "ALU",
+    "VERILOG_FILES": [
+        "dir::../fp_adder.v",
+        "dir::../fp_multiplier.v",
+        "dir::../ALU.v"
+    ],
+    "CLOCK_PERIOD": 35.0,
+    "SYNTH_STRATEGY": "DELAY 0",
+    "FP_CORE_UTIL": 60,
+    "FP_PDN_MULTILAYER": false,
+    "PNR_SDC_FILE": "dir::./constraints.sdc",
+    "SIGNOFF_SDC_FILE": "dir::./constraints.sdc"
+}
