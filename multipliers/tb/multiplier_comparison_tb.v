@@ -1,4 +1,6 @@
+`timescale 1ns / 1ps
 module multiplier_comparison_tb();
+
   reg clk, rst, start;
   reg signed [31:0] multiplicand, multiplier;
 
@@ -136,7 +138,7 @@ module multiplier_comparison_tb();
   // Timeout watchdog
   initial
   begin
-    #1000000;
+    #10000000;
     $display("Simulation timeout!");
     $finish;
   end

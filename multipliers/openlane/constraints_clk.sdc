@@ -9,4 +9,4 @@ set_output_delay 0.5 [all_outputs]
 set_load 0.01 [all_outputs]
 
 # Define clock skew constraint
-# set_clock_uncertainty 0.2 [get_clocks clk]
+set_clock_uncertainty 0.2 [get_clocks clk]

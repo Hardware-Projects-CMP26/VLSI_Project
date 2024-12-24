@@ -10,4 +10,4 @@ vlog -work work {./multipliers/tb/multiplier_comparison_tb.v}
 
 vsim -t 1ps work.multiplier_comparison_tb
 
-run 1000ns
+run 10000ns
