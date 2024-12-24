@@ -6,7 +6,7 @@ module ripple_4bit (
     output Cout
   );
   wire [3:0] P;
-  assign P=A ^ B;
+  assign P= A ^ B;
   wire [3:0] Cout_temp;
   assign select=&P;
   assign Cout = (select == 1'b1) ? Cin : Cout_temp[3];
@@ -77,13 +77,13 @@ module fp_adder (
                  .Sum(result_fraction_sub12),
                  .Cout(cout)
                );
-  CarryBypass_Adder fraction_sub21(
-                      .A(fraction1_32neg),
-                      .B(fraction2_32),
-                      .Cin(cin),
-                      .Sum(result_fraction_sub21),
-                      .Cout(cout)
-                    );
+  Bypass_Adder fraction_sub21(
+                 .A(fraction1_32neg),
+                 .B(fraction2_32),
+                 .Cin(cin),
+                 .Sum(result_fraction_sub21),
+                 .Cout(cout)
+               );
 
   always @*
   begin
