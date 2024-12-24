@@ -1,6 +1,6 @@
 {
-  "DESIGN_NAME": "normal_multiplier",
-  "VERILOG_FILES": "dir::../rtl/normal_multiplier.v",
+  "DESIGN_NAME": "dadda_multiplier",
+  "VERILOG_FILES": "dir::../rtl/dadda_multiplier_32.v",
   "CLOCK_PORT": "clk",
   "CLOCK_NET": "clk",
   "CLOCK_PERIOD": 20.0,
