@@ -1,3 +1,4 @@
+`timescale 1ns / 1ps
 module adder_comparison_tb();
   reg signed [31:0] A, B;             // Inputs
   reg Cin;                            // Cin
