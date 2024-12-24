@@ -5,7 +5,6 @@ vlib work
 
 vlog -work work {./adders/rtl/full_adder.v}
 vlog -work work {./adders/rtl/ripple_carry_adder4.v}
-vlog -work work {./adders/rtl/skip_logic.v}
 
 vlog -work work {./adders/rtl/ripple_carry_adder.v}
 vlog -work work {./adders/rtl/carry_look_ahead_adder.v}
