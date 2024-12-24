@@ -1,5 +1,5 @@
 {
-  "DESIGN_NAME": "dadda_multiplier",
+  "DESIGN_NAME": "dadda_multiplier_32",
   "VERILOG_FILES": "dir::../rtl/dadda_multiplier_32.v",
   "CLOCK_PORT": "clk",
   "CLOCK_NET": "clk",
