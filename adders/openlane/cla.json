@@ -17,13 +17,13 @@
       "OpenROAD.STAPostPNR"
     ]
   },
-  "DESIGN_NAME": "dadda_multiplier_32",
+  "DESIGN_NAME": "carry_look_ahead_adder",
   "VERILOG_FILES": [
-    "dir::../rtl/dadda_multiplier_32.v"
+    "dir::../rtl/carry_look_ahead_adder.v"
   ],
-  "CLOCK_PERIOD": 30.0,
+  "CLOCK_PERIOD": 20.0,
   "SYNTH_STRATEGY": "DELAY 0",
-  "FP_CORE_UTIL": 0.6,
+  "FP_CORE_UTIL": 40,
   "FP_PDN_MULTILAYER": false,
   "PNR_SDC_FILE": "dir::./constraints.sdc",
   "SIGNOFF_SDC_FILE": "dir::./constraints.sdc"
