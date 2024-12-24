@@ -1,0 +1,30 @@
+# Carry Select Adder
+
+'design__instance__area'                  1729.16
+'design__instance__utilization'           0.0055531
+'worst__slack'                            6.1096 
+
+# Ripple Carry Adder
+
+design__instance__area                    1640.32
+design__instance__utilization             0.00568788
+worst__slack                              5.8201
+
+# Carry bypass adder
+
+design__instance__area,                   1639.07
+design__instance__utilization             0.00563557
+worst_slack                               5.5831
+
+# Carry look ahead adder
+
+design__instance__area                    1559
+design__instance__utilization             0.0058915
+worst_slack                               5.2858 
+
+
+# NOTE: area is in um^2
+# NOTE: utilization is a percentage
+# NOTE: slack is in ns
+
+# NOTE: The area when lower is better, the utilization when lower is better, and the slack when higher is better

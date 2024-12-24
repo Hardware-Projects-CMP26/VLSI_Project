@@ -27,6 +27,7 @@
   "SYNTH_STRATEGY": "DELAY 0",
   "FP_CORE_UTIL": 40,
   "FP_PDN_MULTILAYER": false,
+  "FP_PDN_HORIZONTAL_LAYER": null,
   "PNR_SDC_FILE": "dir::./constraints.sdc",
   "SIGNOFF_SDC_FILE": "dir::./constraints.sdc"
 }
